@@ -1,14 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Nova+Mono|Ubuntu+Mono:700') 
 .service
 	font-family: Lato
 	background: #dbecec
 	padding: 40px 0
 	@media screen and (min-width: 1200px)
 		display: flex
-		// justify-content: center
+
 		flex-wrap: wrap
 		.works
-			max-width: 1024px
 			margin: 0 auto
 
 	.works
@@ -16,7 +14,8 @@
 		justify-content: space-around
 		flex-wrap: wrap
 		flex-direction: row
-
+		// padding: 40px 0
+		max-width: 1200px
 		@media screen and (min-width: 1200px)
 			margin: 0 auto
 			// flex-wrap: nowrap
@@ -53,7 +52,7 @@
 			&:checked ~ #home 
 				display: none
 		.service-item
-			margin: 20px 20px
+			padding: 20px 20px
 			display: flex
 			flex-direction: column
 			.service-icon
@@ -124,7 +123,9 @@
 			@media screen and (min-width: 1024px)
 				width: 45%
 	.call-for-action
-		padding-top: 22px
+		padding:
+			top: 20px
+			bottom: 20px
 		text-align: center
 		display: flex
 		justify-content: center
@@ -157,15 +158,17 @@
 		color: rgb(151,181,39)
 
 	padding: 40px 10px
+	max-width: 1200px
 	display: flex
 	flex-wrap: wrap
 	justify-content: space-between
 	align-items: center
 	@media screen and (min-width: 1200px)
-		max-width: 1024px
+		
 		margin: 0 auto
+		padding: 60px 10px
 	.diag-icon
-		padding-bottom: 40px 
+		// padding-bottom: 40px
 		display: flex
 		align-items: center
 		flex-wrap: wrap
@@ -188,7 +191,9 @@
 				font-size: 24px
 				margin-bottom: 10px
 	.diag-desc
+		padding: 20px 20px
 		p 
+
 			font-size: 1.2em
 			margin-bottom: 1em
 			line-height: 1.2em
@@ -197,46 +202,69 @@
 
 .service-lists
 	background: #dbecec
+	color: #eee
 	padding: 40px 0
 	display: flex
-	flex-wrap: wrap
-	width: 100%
-	@media screen and (min-width: 1200px)
-		// flex-direction: column
+	height: 100%
+	flex-direction: column
+	position: relative
+	background: url("../assets/imgs/work.jpg") center center
+	background-size: cover
+	&:before
+		content: ' '
+		display: block
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		z-index: 0
+		background: rgba(0,0,0,0.15)
+
+	
 	.service-lists-title
 		font-family: 'Catamaran', sans-serif
 		text-align: left
-		width: 100%
+	
 		padding: 0 10px
+		z-index: 4
 		h1
 			font-size: 36px
 			padding-bottom: 12px
 			letter-spacing: 0.2em
 		@media screen and (min-width: 1200px)
-			max-width: 1400px
+			
 			margin: 0 auto
 	.service-list-items
+		z-index: 4
 		display: flex
 		width: 100%
 		flex-wrap: wrap
+		max-width: 1200px
 		justify-content: center
 		@media screen and (min-width: 720px)
 			justify-content: center
 		@media screen and (min-width: 1200px)
-			max-width: 1400px
+			
 			margin: 0 auto
 			justify-content: flex-start
 		.service-list-item
 			font-family: 'Lato', sans-serif
 			display: flex
 			padding: 20px 10px
-			&:hover
-				.service-list-icon
-					.fa-circle-thin			
-						color: rgb(151,181,39)
-					.fa-stack
-						color: rgb(151,181,39)
-			
+			background: rgba(0,0,0,.4)
+			// color: #fff
+			&:nth-last-child(n+2)
+				transition-duration: 300ms
+				&:hover
+					box-shadow: 0px 0px 11px 2px rgba(0,0,0,0.75)
+					background: rgba(255,255,255,.4)
+					.service-list-icon
+						.fa-circle-thin			
+							color: rgb(151,181,39)
+						.fa-stack
+							color: rgb(151,181,39)
+				
 			@media screen and (min-width: 768px)
 				flex-grow: 1
 				width: calc(100% * (1/3))
@@ -255,10 +283,11 @@
 			.service-list-desc
 				padding: 0 10px
 				text-align: left
+				z-index: 4
 				h3
 					font-size: 22px
 					padding-bottom: 4px
-					font-weight: 100
+					// font-weight: 100
 				p
 					font-size: 1.1em
 					line-height: 1.2em
@@ -266,10 +295,11 @@
 						color: red
 						font-weight: 700
 	
-
 			&:last-child
 				width: 100%
+				background: none
 				.call-for-action
+					z-index: 4
 					margin: 0 auto
 					align-self: center
 					a 
@@ -290,6 +320,187 @@
 
 							background: rgb(151,181,39)
 				@media screen and (min-width: 720px)
-
 					margin-top: 20px 
+.contact
+	width: 100%
+	padding:
+		bottom: 20px
+	background: #dbecec
+	@media screen and (min-width: 1024px)
+		padding:
+			bottom: 0px
+	.wrapper
+		
+		margin: 0 auto
+		max-width: 1200px
+		// height: 100%
+		display: flex
+		justify-content: center	
+		flex-direction: column
+		align-items: center
+		align-content: center
+		@media screen and (min-width: 1024px)
+			flex-direction: row
+			
+		.store-map
+			height: 410px
+			width: 100%
+			@media screen and (min-width: 1024px)	
+				width: calc(100% * (1/3) )
+
+			.map-wrapper
+				display: flex
+				flex-direction: column
+				align-items: flex-start
+				align-content: stretch
+				// font-size: 1em
+				h1 
+					font-size: 22px
+				h3
+					font-size: 14px
+					font-weight: 100
+					padding-bottom: 10px
+				a
+					text-decoration: none
+					padding-left: 10px
+					font-size: 	16px
+					&:first-child
+						font-weight: bold
+						font-size: 18px
+		.address
+			font-family: 'Catamaran', sans-serif
+			
+			padding: 10px 20px
+			display: flex
+			flex-direction: column
+			
+			justify-content: center
+			
+			text-align: left
+			h3
+				font-size: 26px
+				font-weight: 100
+				padding:
+					top: 10px
+					bottom: 10px
+			.st-add
+
+				padding-bottom:	10px
+
+				h1
+					font-size: 40px
+					
+					text-align: center
+				h3
+					font-size: 20px
+					font-weight: 100
+					padding:
+						top: 0
+						bottom: 10px
+				p
+					font-size: 18px
+					line-height: 1.2em
+					text-width: bold
+			.web, .phone
+				i 
+					font-size: 1.2em
+				a 
+					text-decoration: none
+					color: black
+					font-size: 1.2em
+			.web
+				padding-bottom: 10px
+
+			.social-media
+				margin: 0 auto
+				width: 70%
+				display: flex 
+				justify-content: space-between
+				// padding: 20px 0
+				.so-media-item
+					a 
+						text-decoration: none
+					&:first-child
+						a
+							color: red
+					&:nth-child(2)
+						a 
+							color: rgb(59,89,152) 
+					&:last-child
+						a 
+							.fa-inverse
+								color: white
+
+.testimonial-wrapper
+	font-family: 'Ubuntu', sans-serif
+	background: #dbecec
+	color: #eee
+	padding: 20px 0
+	display: flex
+	height: 100%
+	flex-direction: column
+	position: relative
+	background: url("../assets/imgs/people.jpg") center center
+	background-size: cover
+	&:before
+		content: ' '
+		display: block
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		z-index: 0
+		background: rgba(0,0,0,0.6)
+
+	.testimonials
+		z-index: 4
+		display: flex
+		justify-content: center
+		padding: 40px 10px
+		flex-direction: column
+		align-items: center
+		max-width: 1200px
+		margin: 0 auto
+		@media screen and (min-width: 720px)
+			justify-content: center
+			flex-direction: row
+			align-items: stretch
+			flex-wrap: wrap
+			h1
+				font-size: 36px
+				width: 100%
+				color: #fff
+			
+		.testimonial-item
+			background: rgba(255,255,255,1)
+			border-radius: 5px
+			color: #000
+			display: flex
+			flex-direction: column
+			// flex-grow: 1
+			max-width: 200px
+			justify-content: space-between
+			align-items: center
+			padding: 10px 10px
+			
+			box-shadow: 0px 0px 11px 2px rgba(0,0,0,0.75)
+			margin: 20px 0px
+			.desc
+				padding: 20px 20px
+				font-weight: 400
+				p 
+					line-height: 1.2em
+			.name
+				text-align: center
+				img
+					margin: 10px auto					
+					border-radius: 50%
+					border: 2px solid black
+				label
+					font-weight: bold
+			@media screen and (min-width: 720px)
+				min-height: 20vh
+				margin: 20px 40px
+
 
