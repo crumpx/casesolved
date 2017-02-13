@@ -75,23 +75,23 @@ function map_init() {
     };
     var map = new google.maps.Map(document.getElementById('store-map'), mapOptions);
 
-  //    //=====Initialise Default Marker    
-  //   var marker = new google.maps.Marker({
-  //       position: storeLocation,
-  //       map: map,
-  //       title: 'Case Solved'
-  //    //=====You can even customize the icons here
-  //   });
+     //=====Initialise Default Marker    
+    var marker = new google.maps.Marker({
+        position: storeLocation,
+        map: map,
+        title: 'Case Solved'
+     //=====You can even customize the icons here
+    });
 
-  //    //=====Initialise InfoWindow
-  //   var infowindow = new google.maps.InfoWindow({
-  //   	content: '{% include landing/map-marker.html %}'
-  //  });
+     //=====Initialise InfoWindow
+    var infowindow = new google.maps.InfoWindow({
+    	content: '{% include landing/map-marker.html %}'
+   });
 
-  //  //=====Eventlistener for InfoWindow
-  // google.maps.event.addListener(marker, 'click', function() {
-  //   infowindow.open(map,marker);
-  // });
+   //=====Eventlistener for InfoWindow
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.open(map,marker);
+  });
 }
 
 google.maps.event.addDomListener(window, 'load', map_init);
