@@ -1,0 +1,33 @@
+<section class='service-lists'>
+	<div class="service-lists-title">
+		<h1>Things we do</h1>
+	</div>
+	<div class="service-list-items">
+		
+		{% for item in site.data.works %}
+		<div class="service-list-item">				
+			<div class="service-list-icon">
+				<span class="fa-stack fa-2x">
+					<i class="fa fa-circle-thin fa-stack-2x"></i>
+					<i class="fa {{ item.icon }} fa-stack-1x"></i>
+				</span>
+			</div>
+
+			<div class="service-list-desc">
+				<h3>{{ item.title }}</h3>
+				<p>{{ item.description }}</p>
+			</div>
+
+		</div>
+		{% endfor %}
+
+			<div class="service-list-item">
+<div class="call-for-action">
+<a href="tel:9176986268"><i class="fa fa-phone" aria-hidden="true"></i>917-698-6268</a>
+</div>
+
+</div>
+
+</div>
+
+</section>

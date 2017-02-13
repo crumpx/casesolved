@@ -1,0 +1,34 @@
+- title: Desktop Service
+  icon: fa-desktop
+  description: Build, upgrade and repair desktop computers, PC, Mac and anything in between.
+
+
+
+- title: Laptop Service
+  icon: fa-laptop
+  description: Upgrade and repair all types of laptops! No display? LCD cracked? No problem!
+
+- title: System Clean-up
+  icon: fa-shield
+  description: Malware/Ad-ware/Virus are not only annoying, yet dangerous. Let us help you to protect your sensitive information.
+
+- title: Mobile Device
+  icon: fa-mobile
+  description: Apple, Samsung, Huawei... You name it! Repair all sort of problem you can think of.
+
+- title: Data Recovery Service
+  icon: fa-database
+  description: Computer/Server failed and fear of losing your data? We are here to help! <strong>Disconnect the power from the unit and give us a call immediately!</strong>
+
+- title: Data Backup Solutions
+  icon: fa-server
+  description: Take precautions! Data is everything. Home and business users should have a backup plan so when the unexpected happen, your data is safe.
+
+- title: Networking
+  icon: fa-wifi
+  description: Need to connect 30 computers and printers together? Need to provide WiFi connection for your employees and clients/customers? We can help!
+
+- title: Web Development
+  icon: fa-file-code-o
+  description: Not having a website for your business is unthinkable nowadays. Let Case Sovled help you to reach more customers!
+

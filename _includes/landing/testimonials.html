@@ -1,0 +1,24 @@
+<section id='testimonials'>
+	<div class="testimonial-wrapper">
+	
+	<div class="testimonials">
+	<h1>Happy Clients</h1>
+	{% for item in site.data.testimonial %}
+		<div class="testimonial-item">
+			<div class="desc">
+					<p>{{ item.text }}</p>
+			</div>
+
+			<div class="name">
+				<div class="avatar">
+					<img src="{{ item.picture }}">
+				</div>
+				<label>{{ item.name }}</label>
+			</div> 		
+		</div>
+		{% endfor %}
+
+	</div>
+	</div>
+
+</section>

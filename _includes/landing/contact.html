@@ -1,0 +1,43 @@
+<section class="contact" id='contact'>
+	<div class="wrapper">
+		<div class="store-map" id='store-map'>		
+		</div>
+
+		<div class="address">
+			<div class="st-add">
+				<h1>Case Solved</h1>
+				<h3>IT Service and Repair, Astoria</h3>
+				<p>22-07 36th Street <br>Astoria, New York 11105</p>
+			</div>
+
+			<div class="web">
+				<i class="fa fa-globe" aria-hidden="true"></i>
+				<a href="http://casesolved.us">casesolved.us</a>
+			</div>
+
+			<div class="phone">
+					<i class="fa fa-phone" aria-hidden="true"></i>
+					<a href="tel:(917)698-6268">(917) 698-6268</a>
+			</div>
+
+			<h3>Connect with us</h3>
+			<div class="social-media">
+			
+			{% for item in site.data.social %}
+				<div class="so-media-item">
+					<a href="{{ item.link }}">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa {{ item.icon }} fa-stack-1x fa-inverse"></i>
+				</span>
+				</a>		
+				</div>
+			{% endfor %}
+				
+			</div>
+			
+		</div>
+	</div>
+
+	
+</section>
