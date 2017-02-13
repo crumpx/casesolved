@@ -12,7 +12,10 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<!--   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script> -->
+  <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyARtjRKK-t7OEeUBYSdfXlfHHWQtA4Ola8" async="" defer="defer" type="text/javascript"></script>
+
+  <!-- AIzaSyARtjRKK-t7OEeUBYSdfXlfHHWQtA4Ola8 -->
 </head>
 <body>
 
@@ -58,9 +61,6 @@
 
 		$(document).on('click', 'a', function(event){
 			if (this.href.indexOf('#') !== -1) {
-				console.log('this is a #')
-				// event.preventDefault();
-
 	    	$('html, body').animate({
 	      	  scrollTop: $( $.attr(this, 'href') ).offset().top -20
 	    	}, 500);
