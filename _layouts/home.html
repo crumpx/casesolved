@@ -26,7 +26,7 @@
 			$(document).on('click', function (e) {
 				if ($(e.target).closest("#nav-menu").length === 1 || 
 						$(e.target).closest(".toggle-menu").length === 1){
-							// $('.nav-menu').css('background', '#fff');
+		
 	        		$(".nav-menu").slideToggle();
 	        	} else if ($('.nav-menu').css('display') === 'block') {
 	        		$(".nav-menu").slideToggle();	        		
@@ -64,7 +64,7 @@
 			} 
 });
 
-function initialize() {
+function map_init() {
     var storeLocation = new google.maps.LatLng(40.7741313,-73.9092129,18);
     var mapOptions = {
         zoom: 16,
@@ -77,7 +77,7 @@ function initialize() {
     var marker = new google.maps.Marker({
         position: storeLocation,
         map: map,
-        title: 'marker'
+        title: 'Case Solved'
      //=====You can even customize the icons here
     });
 
@@ -92,7 +92,8 @@ function initialize() {
   });
 }
 
-(google.maps.event.addDomListener(window, 'load', initialize));
+google.maps.event.addDomListener(window, 'load', map_init);
+
 	</script>
 
 	
