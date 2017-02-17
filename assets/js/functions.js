@@ -1,34 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Case Solved computer repair, phone repair, astoria, home service, office service</title>
-	<meta charset="utf-8">
-	<meta name="description" content="{{ site.description}}">
-	<meta name="keywords" content="computer repair, phone repair, astoria, home service, office service">
-	<meta name="author" content="Gang Zhao, Case Solve Corp">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARtjRKK-t7OEeUBYSdfXlfHHWQtA4Ola8" ></script>
-
-
-</head>
-<body>
-<div id="container">
-
-{% include header.html %}
-{% include landing.html %}
-{% include footer.html %}
-`
-</div>
-<div id="loading"></div>
-
-
-
-
-	<script>
 
 	function onReady(callback) {
 		var intervalID = window.setInterval(checkReady, 1000);
@@ -48,11 +17,11 @@
 	onReady(function () {
 			show('container', true);
 			show('loading', false);
+
 	});
 
-
-
-		if ($(window).width() <=768) {
+	$(document).ready(function(){
+		if ($(window).width() < 768) {
 			$(document).on('click', function (e) {
 				if ($(e.target).closest("#nav-menu").length === 1 || 
 						$(e.target).closest(".toggle-menu").length === 1){
@@ -61,23 +30,31 @@
 						} else if ($('.nav-menu').css('display') === 'block') {
 							$(".nav-menu").slideToggle();	        		
 						}
-		});
-	}
+			});
+		}
+
+		if ($(window).width() >= 768) {
+			$('footer').css('display','block');
+		}
+
+
 
 		$(window).scroll(function() {
 			if ($('.navbar').offset().top > $('.navbar').height()) {
 				$('.navbar').css('background-color','#333');
-				$('.navbar-brand').css('color', '#fff');
+				$('a .navbar-brand').css('color', '#fff');
 				$('.nav-menu').css('background', '#333');
 				$('.nav-menu a').css('color', '#fff');
+				$('.back-button a').css('color', '#fff');
 				if ($(window).width()<=1023) {							
 					$('.toggle-menu').css('color', '#fff');
 				} 			
 			} else {
 				$('.navbar').css('background-color','#fff');
-				$('.navbar-brand').css('color', '#777');
+				$('a .navbar-brand').css('color', '#000');
 				$('.nav-menu').css('background', '#fff');
 				$('.nav-menu a').css('color', '#777');
+				$('.back-button a').css('color', '#777');
 				$('.nav-menu a:nth-last-of-type(-n+2)').css('color', '#fff');
 				if ($(window).width()<=1023) {							
 					$('.toggle-menu').css('color', '#777');
@@ -87,12 +64,29 @@
 
 
 		$(document).on('click', 'a', function(event){
-			if (this.href.indexOf('#') !== -1) {
-				$('html, body').animate({
-						scrollTop: $( $.attr(this, 'href') ).offset().top -20
-				}, 500);
-			} 
+			var path = window.location.pathname;
+			console.log(window.location);
+			if (path === '/') {
+				if (this.href.indexOf('#') !== -1) {
+					$('html, body').animate({
+							scrollTop: $( $.attr(this, 'href') ).offset().top -20
+					}, 500);
+				}
+			} else if(path === '/blog' && this.href.indexOf('#') !== -1) {
+				this.href = window.location.origin;	
+			}
 });
+
+		$(document).scroll(function () {
+			var y = $(this).scrollTop();
+			var wHeight = $(window).height();
+			var dHeight = $(document).height();
+			if ( y >= dHeight - wHeight - 200 ) {
+				$('footer').fadeIn();
+			} else {
+				$('footer').fadeOut();
+			}
+		});
 
 function map_init() {
 		var storeLocation = new google.maps.LatLng(40.7741313,-73.9092129,18);
@@ -124,9 +118,5 @@ function map_init() {
 
 google.maps.event.addDomListener(window, 'load', map_init);
 
-	</script>
+});
 
-	
-
-</body>
-</html>

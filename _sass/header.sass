@@ -1,13 +1,5 @@
 header
 	font-family: 'Catamaran', sans-serif
-	height: 400px
-	@media screen and (min-width: 790px)
-		height: 640px
-	@media screen and (min-width: 1270px)
-		height: 800px
-	@media screen and (min-width: 1900px)
-		height: 900px
-
 	.navbar
 		position: fixed
 		top: 0
@@ -32,22 +24,23 @@ header
 			margin: 0 auto
 			max-width: 1200px
 			padding: 0 20px
-			// margin: 0 20px
 			flex-wrap: wrap
+			a
+				color: #000			
 			.navbar-brand
 				display: flex
 				justify-content: center
 				flex-direction: column
 				font-family: 'Catamaran', sans-serif
 				transition-duration: 700ms
-				h1				
-					font-size: 36px
+				
+				h1
+					margin-top: 10px				
 					font-weight: 100
-					padding: 10px 0
 					line-height: 0.5em
-				h4
-					font-size: 14px
+				h6				
 					text-align: center
+					padding-bottom: 0
 
 			.toggle-menu
 				color: #777
@@ -92,8 +85,5 @@ header
 					width: initial
 					display: flex
 					border: none
-			
-	.landing-pic
-		height: 100%
-		background: url("../assets/imgs/header-computer.png") center center
-		background-size: cover
+		
+

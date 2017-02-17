@@ -1,0 +1,19 @@
+<nav class="navbar">
+		<div class="wrapper">			
+			<a href="/">
+			<div class="navbar-brand">	    	
+		    <h1>Case Solved</h1>
+		    <h6>IT Serivce and Repair, Astoria</h4>
+	    </div>
+	    </a>
+	    
+			
+			{% if page.layout == 'index'%}
+		    {% include header/toggle-menu.html %}
+		    {% include header/nav-menu.html %}	
+		  {% else %}	
+		   {% include header/back-button.html %}
+			{% endif %}
+
+		</div>
+ 	</nav>

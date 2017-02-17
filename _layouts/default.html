@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ page.title }}</title>
+	<meta charset="utf-8">
+	<meta name="description" content="{{ site.description}}">
+	<meta name="keywords" content="computer repair, phone repair, astoria, home service, office service">
+	<meta name="author" content="Gang Zhao, Case Solve Corp">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key={{ site.google_maps_javascript_api_key }}" ></script>
+	<script src="/assets/js/functions.js"></script>
+</head>
+<body>
+<div id="container">
+{% include header.html %}
+{{ content }}
+{% include footer.html %}
+</div>
+
+<div id="loading"></div>
+</body>
+</html>
